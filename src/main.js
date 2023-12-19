@@ -1,4 +1,4 @@
-const core = require('@actions/core');
+const core = require('@actions/core')
 
 /**
  * The main function for the action.
