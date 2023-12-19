@@ -20,7 +20,7 @@ async function run() {
         'Authorization': `Bearer ${token}`,
         'Content-Type': "application/json" 
       }
-    }).catch(e => core.setFailed(e));
+    }).catch(e => core.setFailed(e))
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)
