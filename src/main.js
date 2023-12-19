@@ -16,8 +16,9 @@ async function run() {
     // Perform cache purging
     await axios.post(`${CF_BASE_API_URL}/zones/${zone}/purge_cache`, {
       purge_everything: true,
+    }, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
       }
     })
