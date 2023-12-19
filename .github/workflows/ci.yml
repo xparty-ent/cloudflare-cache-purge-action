@@ -42,6 +42,17 @@ jobs:
         id: npm-ci-test
         run: npm run ci-test
 
+      - name: Push
+        id: action-push
+        run: |
+          git config --global user.name 'xp-action'
+          git config --global user.email 'xp-action@x-party.it'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git add dist/
+          git commit -m "dist push"
+          git push
+
+
   test-action:
     name: GitHub Actions Test
     runs-on: [self-hosted, doctorparts-host]
