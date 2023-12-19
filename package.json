@@ -1,16 +1,16 @@
 {
-  "name": "javascript-action",
-  "description": "GitHub Actions JavaScript Template",
-  "version": "0.0.0",
-  "author": "",
-  "private": true,
-  "homepage": "https://github.com/actions/javascript-action#readme",
+  "name": "cloudflare-cache-purge-action",
+  "description": "A custom GitHub Action to purge CloudFlare cache for a specified zone",
+  "version": "1.0.0",
+  "author": "https://github.com/xparty-ent",
+  "private": false,
+  "homepage": "https://github.com/xparty-ent/cloudflare-cache-purge-action#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/javascript-action.git"
+    "url": "git+https://github.com/xparty-ent/cloudflare-cache-purge-action.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/javascript-action/issues"
+    "url": "https://github.com/xparty-ent/cloudflare-cache-purge-action/issues"
   },
   "keywords": [
     "GitHub",

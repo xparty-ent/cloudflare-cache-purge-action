@@ -1,18 +1,17 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'cloudflare-cache-purge-action'
+description: 'A custom GitHub Action to purge CloudFlare cache for a specified zone'
+author: 'https://github.com/xparty-ent'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  CLOUDFLARE_ZONE:
+    description: 'The CloudFlare Zone used to purge the cache'
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+    default: ''
+  CLOUDFLARE_TOKEN:
+    description: 'The CloudFlare API Token used to authenticate requests'
+    required: true
+    default: ''
 
 runs:
   using: node20
