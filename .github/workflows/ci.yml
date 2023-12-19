@@ -38,6 +38,10 @@ jobs:
         id: npm-lint
         run: npm run lint
 
+      - name: Package
+        id: npm-package
+        run: npm run package
+
       - name: Push
         id: action-push
         run: |
