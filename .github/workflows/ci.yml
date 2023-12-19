@@ -12,7 +12,7 @@ permissions:
 jobs:
   test-javascript:
     name: JavaScript Tests
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, doctorparts-host]
 
     steps:
       - name: Checkout
@@ -44,7 +44,7 @@ jobs:
 
   test-action:
     name: GitHub Actions Test
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, doctorparts-host]
 
     steps:
       - name: Checkout
