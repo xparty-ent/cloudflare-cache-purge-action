@@ -14,7 +14,7 @@ async function run() {
     const token = core.getInput('CLOUDFLARE_TOKEN', { required: true })
 
     // Perform cache purging
-    await axios.post(
+    const response = await axios.post(
       `${CF_BASE_API_URL}/zones/${zone}/purge_cache`,
       {
         purge_everything: true
@@ -26,6 +26,8 @@ async function run() {
         }
       }
     )
+
+    core.info(`response: ${JSON.stringify(response.data)}`)
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)
